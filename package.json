@@ -1,0 +1,65 @@
+{
+  "name": "coding-challenge-full-stack-js",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.6",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "cors-anywhere": "^0.4.4",
+    "express": "4.17.1",
+    "node-fetch": "^3.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "styled-components": "^6.0.1"
+  },
+  "devDependencies": {
+    "ava": "3.15.0",
+    "nodemon": "2.0.7",
+    "npm-run-all": "4.1.5",
+    "supertest": "6.1.2"
+  },
+  "scripts": {
+    "start": "npm-run-all -l -p start-react start-api",
+    "start-react": "react-scripts start",
+    "start-api": "nodemon api/server.js",
+    "build": "react-scripts build",
+    "test": "npm-run-all test-app test-api",
+    "test-app": "react-scripts test --watchAll=false",
+    "test-api": "ava api/tests/*.js",
+    "eject": "react-scripts eject"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/*",
+      "public/*"
+    ],
+    "delay": "2000"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
